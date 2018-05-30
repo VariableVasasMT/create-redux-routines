@@ -1,5 +1,5 @@
 import CreateReducers from './src/createReducers';
-import { getActionObjects } from './src/createActions';
+import { getActionObjects, getLoadingActions } from './src/createActions';
 
 class ReduxObject extends CreateReducers {
   constructor( actionTypes, options, customError ){
@@ -9,4 +9,5 @@ class ReduxObject extends CreateReducers {
 }
 
 window.ReduxObject = ReduxObject;
+export getLoadingActions from './src/createActions';
 export default ReduxObject;
