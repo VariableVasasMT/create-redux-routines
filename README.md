@@ -47,3 +47,4 @@ var reduxObject = new ReduxObject([
 ]);
 ```
 gets you 
+![alt text](https://i.imgur.com/EcMHW5n.png)
