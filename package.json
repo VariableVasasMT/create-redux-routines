@@ -1,6 +1,6 @@
 {
   "name": "create-redux-routines",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "To create actions and reducers in one go",
   "main": "index.js",
   "scripts": {
