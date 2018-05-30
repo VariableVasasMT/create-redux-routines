@@ -1,0 +1,47 @@
+{
+  "name": "create-redux-routines",
+  "version": "1.0.0",
+  "description": "To create actions and reducers in one go",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VariableVasasMT/create-redux-routines.git"
+  },
+  "keywords": [
+    "redux",
+    "actions",
+    "reducers",
+    "createActions",
+    "createReducers"
+  ],
+  "author": "Kritivasas Shukla",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/VariableVasasMT/create-redux-routines/issues"
+  },
+  "homepage": "https://github.com/VariableVasasMT/create-redux-routines#readme",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.3.14",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "jest": "^23.0.1",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.4"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-runtime": "^6.26.0",
+    "is-plain-object": "^2.0.4"
+  }
+}
