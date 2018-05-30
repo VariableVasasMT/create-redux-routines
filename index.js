@@ -9,5 +9,7 @@ class ReduxObject extends CreateReducers {
 }
 
 window.ReduxObject = ReduxObject;
-export getLoadingActions from './src/createActions';
+
+export * from './src/createActions';
+export * from './src/createReducers';
 export default ReduxObject;
