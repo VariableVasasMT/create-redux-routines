@@ -109,7 +109,7 @@ class ReduxObject extends _src_createReducers__WEBPACK_IMPORTED_MODULE_0___defau
   }
 }
 
-// window.ReduxObject = ReduxObject;
+window.ReduxObject = ReduxObject;
 /* harmony default export */ __webpack_exports__["default"] = (ReduxObject);
 
 /***/ }),

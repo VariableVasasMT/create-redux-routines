@@ -8,5 +8,5 @@ class ReduxObject extends CreateReducers {
   }
 }
 
-// window.ReduxObject = ReduxObject;
+window.ReduxObject = ReduxObject;
 export default ReduxObject;
