@@ -128,10 +128,44 @@ ReduxObject: {
     },
     GET_INFO: {
       FAIL: "GET_INFO_FAIL",
-      FULLFILL: "GET_INFO_FULLFILL",
       LOADING: "GET_INFO_DATA",
       SUCCESS: "GET_INFO_SUCCESS",
       TRIGGER: "GET_INFO_TRIGGER",
+      FULLFILL: "GET_INFO_FULLFILL",
+      fail: (error = {}, meta = {}) => {
+        return {
+          type: FAIL,
+          payload: error.error ? error : { error },
+          meta
+        };
+      },
+      success: (data = {}, meta) => {
+        return {
+          type: SUCCESS,
+          payload: {
+            ...data
+          }, meta
+        };
+      },
+      trigger: ( data = {}, meta ) => {
+        return {
+          type: TRIGGER,
+          meta
+        }
+      },
+      fullfill: ( data = {}, meta ) => {
+        return {
+          type: FULLFILL,
+          meta
+        }
+      },
+      loading: (payload, meta) => {
+        return {
+          type: actionType,
+          payload: payload,
+          meta: meta
+        }
+      }
     }
   },
   reducers: (state = initialState, action) => {
