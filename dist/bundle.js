@@ -119,79 +119,6 @@ window.ReduxObject = ReduxObject;
 
 /***/ }),
 
-/***/ "./node_modules/is-plain-object/index.js":
-/*!***********************************************!*\
-  !*** ./node_modules/is-plain-object/index.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/*!
- * is-plain-object <https://github.com/jonschlinkert/is-plain-object>
- *
- * Copyright (c) 2014-2017, Jon Schlinkert.
- * Released under the MIT License.
- */
-
-
-
-var isObject = __webpack_require__(/*! isobject */ "./node_modules/isobject/index.js");
-
-function isObjectObject(o) {
-  return isObject(o) === true
-    && Object.prototype.toString.call(o) === '[object Object]';
-}
-
-module.exports = function isPlainObject(o) {
-  var ctor,prot;
-
-  if (isObjectObject(o) === false) return false;
-
-  // If has modified constructor
-  ctor = o.constructor;
-  if (typeof ctor !== 'function') return false;
-
-  // If has modified prototype
-  prot = ctor.prototype;
-  if (isObjectObject(prot) === false) return false;
-
-  // If constructor does not have an Object-specific method
-  if (prot.hasOwnProperty('isPrototypeOf') === false) {
-    return false;
-  }
-
-  // Most likely a plain Object
-  return true;
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/isobject/index.js":
-/*!****************************************!*\
-  !*** ./node_modules/isobject/index.js ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/*!
- * isobject <https://github.com/jonschlinkert/isobject>
- *
- * Copyright (c) 2014-2017, Jon Schlinkert.
- * Released under the MIT License.
- */
-
-
-
-module.exports = function isObject(val) {
-  return val != null && typeof val === 'object' && Array.isArray(val) === false;
-};
-
-
-/***/ }),
-
 /***/ "./src/createActions.js":
 /*!******************************!*\
   !*** ./src/createActions.js ***!
@@ -724,7 +651,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.isString = exports.isFunction = exports.isUndefined = undefined;
 exports.isObject = isObject;
 
-var _isPlainObject = __webpack_require__(/*! is-plain-object */ "./node_modules/is-plain-object/index.js");
+var _isPlainObject = __webpack_require__(/*! is-plain-object */ "is-plain-object");
 
 var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
@@ -745,6 +672,17 @@ var isString = exports.isString = function isString(value) {
 function isObject(x) {
   return (0, _isPlainObject2.default)(x);
 }
+
+/***/ }),
+
+/***/ "is-plain-object":
+/*!**********************************!*\
+  !*** external "is-plain-object" ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = is-plain-object;
 
 /***/ })
 

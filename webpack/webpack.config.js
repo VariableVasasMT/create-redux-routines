@@ -30,7 +30,7 @@ module.exports = {
     extensions: ['.json', '.js']
   },
   devtool: 'source-map',
-  external: dependencies,
+  externals: dependencies,
   devServer: {
     publicPath: path.join('/dist/')
   }
