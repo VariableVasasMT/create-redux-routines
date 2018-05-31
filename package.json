@@ -1,9 +1,11 @@
 {
   "name": "create-redux-routines",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "To create actions and reducers in one go",
-  "main": "index.js",
+  "main": "dist/bundle.js",
   "scripts": {
+    "build": "webpack --config ./webpack/webpack.config.js --progress --colors",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,6 +32,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-plugin-transform-es2015-modules-simple-commonjs": "^0.3.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.3.14",

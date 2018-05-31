@@ -1,6 +1,8 @@
 const path = require('path');
 const resolve = path.resolve;
 const { Dir } = require('./config/env.config');
+
+const dependencies = Object.keys( require('../package.json').dependencies )
 module.exports = {
   mode: 'development',
   entry: resolve( Dir.ROOT, 'index' ),
@@ -28,6 +30,7 @@ module.exports = {
     extensions: ['.json', '.js']
   },
   devtool: 'source-map',
+  external: dependencies,
   devServer: {
     publicPath: path.join('/dist/')
   }
