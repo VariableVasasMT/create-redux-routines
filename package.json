@@ -2,7 +2,7 @@
   "name": "create-redux-routines",
   "version": "1.0.5",
   "description": "To create actions and reducers in one go",
-  "main": "dist/bundle.js",
+  "main": "dist/main.es.js",
   "scripts": {
     "build": "run-p build:**",
     "build:es": "cross-env FORMAT=es webpack --config ./webpack/webpack.config.js --progress --colors",
