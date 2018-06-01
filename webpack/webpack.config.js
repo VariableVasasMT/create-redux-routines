@@ -1,13 +1,14 @@
 const path = require('path');
 const resolve = path.resolve;
 const { Dir } = require('./config/env.config');
+const { FORMAT, MIN, HOIST } = process.env
 
 module.exports = {
   mode: 'development',
   entry: resolve( Dir.ROOT, 'index' ),
   output: {
-    filename: 'bundle.js',
-    path: resolve(Dir.ROOT, 'dist')
+    path: path.resolve(__dirname, '../dist/'),
+		filename: `[name]${ HOIST ? '-hoisted' : '' }.${ FORMAT }${ MIN ? '.min' : '' }.js`,
   },
   module: {
     rules: [{
